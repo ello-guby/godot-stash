@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://0n752xaqkby"]
+
+[ext_resource type="Script" uid="uid://wsilyd4x1hcy" path="res://centre_points/space.gd" id="1_d5lh8"]
+[ext_resource type="PackedScene" uid="uid://cfh0px32ix4ju" path="res://centre_points/point.tscn" id="2_81phd"]
+[ext_resource type="Texture2D" uid="uid://c73cv0geexa2u" path="res://share/sprites/red_light.svg" id="3_1qqcb"]
+
+[node name="Space" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_d5lh8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -84.0
+offset_right = 163.0
+offset_bottom = -21.0
+grow_vertical = 0
+text = "  M1 - Add point
+  M2 - Move point
+  M3 - Remove point
+   R - Reset
+CTRL - Show line"
+
+[node name="CenterAlgo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -45.0
+offset_right = -27.0
+offset_bottom = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "P1 (0, 0)
++ P2 (0, 0)"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Line" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(445, 97, 420, 238, 51, 240, 0, 0)
+closed = true
+width = 1.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Center" parent="." instance=ExtResource("2_81phd")]
+input_pickable = false
+
+[node name="Visual" parent="Center" index="1"]
+texture = ExtResource("3_1qqcb")
+
+[editable path="Center"]

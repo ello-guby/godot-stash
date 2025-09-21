@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfh0px32ix4ju"]
+
+[ext_resource type="Script" uid="uid://b3rynsqritqtn" path="res://centre_points/point.gd" id="1_q733i"]
+[ext_resource type="Texture2D" uid="uid://u1fx25cy77wm" path="res://share/sprites/green_light.svg" id="2_26ghv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtpbo"]
+
+[node name="Point" type="StaticBody2D"]
+collision_layer = 255
+input_pickable = true
+script = ExtResource("1_q733i")
+
+[node name="CoordDisplay" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0.54902)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_top = 10.0
+offset_right = 47.0
+offset_bottom = 29.0
+grow_horizontal = 2
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 4
+text = "(%s, %s)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Visual" type="Sprite2D" parent="."]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_26ghv")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qtpbo")

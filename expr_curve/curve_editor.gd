@@ -81,7 +81,9 @@ func _create_export(varie: String) -> void:
 	
 	var export = preload("res://expr_curve/exported.tscn").instantiate()
 	export.name = varie
-	export.find_child("Label").text = varie
+	export.find_child("Label").text = "%s:" % RegEx.create_from_string(
+		'(?<=[a-z])([A-Z])'
+	).sub(varie.to_pascal_case(), " $&")
 	export.find_child("Counter").value_changed.connect(func(v): _calcu())
 	meta.add_child(export)
 	_exported.append(export)

@@ -26,7 +26,7 @@ func _get_assign(line: String) -> String:
 	ass = ass.substr(0, ass.length() - 1)
 	ass = ass.strip_edges()
 	if not ass.is_valid_identifier():
-		err("'%s' at line '%d' is not a valid identifier." % [ass, line]); return ""
+		err("'%s' at line '%s' is not a valid identifier." % [ass, line]); return ""
 	return ass
 		
 func _calcu() -> void:
@@ -48,6 +48,7 @@ func _calcu() -> void:
 		
 		for line in code_lines:
 			var ass = _get_assign(line)
+			if not ass: return
 			
 			# Ready expression result up
 			var expr = line.substr(line.find("=") + 1).strip_edges()

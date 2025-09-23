@@ -30,6 +30,7 @@ func _get_assign(line: String) -> String:
 	return ass
 		
 func _calcu() -> void:
+	_clear_export()
 	var code_lines := code.text.split("\n")
 	
 	# End line must be assignment to X or Y
@@ -67,7 +68,6 @@ func _calcu() -> void:
 		var grid_half = grid.size / 2
 		curve.points[i] = Vector2(bank["X"], bank["Y"]) * grid_half + grid_half
 	
-	_clear_export()
 	err("All is good.")
 
 func err(text) -> void:

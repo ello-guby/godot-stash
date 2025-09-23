@@ -10,12 +10,14 @@ symbol_color = Color(0.670588, 0.788235, 1, 1)
 function_color = Color(0.341176, 0.698039, 1, 1)
 member_variable_color = Color(0.737255, 0.878431, 1, 1)
 keyword_colors = {
+"E": Color(1, 0.439216, 0.521569, 1),
 "PI": Color(1, 0.439216, 0.521569, 1),
 "RESO": Color(1, 0.929412, 0.631373, 1),
 "TAU": Color(1, 0.439216, 0.521569, 1),
 "TIME": Color(1, 0.929412, 0.631373, 1),
 "X": Color(0.258824, 1, 0.760784, 1),
-"Y": Color(0.258824, 1, 0.760784, 1)
+"Y": Color(0.258824, 1, 0.760784, 1),
+"export": Color(1, 0.698039, 0.45098, 1)
 }
 
 [node name="CurveEditor" type="HBoxContainer"]

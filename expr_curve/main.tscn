@@ -180,38 +180,26 @@ size_flags_vertical = 3
 [node name="Label" type="Label" parent="Meta/SyntaxNote"]
 layout_mode = 2
 text = "Variables:
-  X    : Horizontal value
-  Y    : Vertical value
-  RESO : Resolution value
-  TIME : Time value. 1.0 = 1 second after code change
-Functions:
-  Support all functions provided by Godot's @GlobalScope
-Arithmatic Operations:
-  + : Addition
-  - : Negation
-  * : Multiplication
-  / : Division
-Other Operations:
-  ** : Power
-  =  : Assignment
-Boolean Operation:
-  == : Equal
-  != : Not Equal
-  >  : Greater then
-  >= : Greater then or equal to
-  <  : Less then
-  <= : Less then or equal to
-Unary Operation:
-  +# : Positive # (Number)
-  -# : Negative # (Number)
-  !B : Opposite B (Boolean)
+  Inputs:
+    X    : X value in space. Only available when assigning Y.
+    Y    : Y value in space. Only available when assigning X.
+    TIME : Time value. 0.0 = After code changed, 1.0 = A second after code changed.
+    RESO : The value of the line's points.
+
+  Outputs:
+    X : X value in space. Assigning disable assign to Y.
+    Y : Y value in space. Assigning disable assign to X.
+
 Syntax:
-  <variable> = <expressions>
-Note:
-  <expressions> is handled by Godot's Expression
-  class. Operation options are expanded.
-  All variable will be a floating number. Thus string
-  variable or any non numeric type might result a crash"
+  <variable> = <expresions>|<keyword>
+
+Expressions (<expressions>):
+  Godot script's expressions. Note: <expressions>'s result
+  will be converted to type float. Incompatible result might
+  result a crash.
+
+Keywords (<keyword>):
+  export : Put the variable like resolution's spinbox"
 
 [node name="SyntaxSeparator" type="HSeparator" parent="Meta"]
 layout_mode = 2

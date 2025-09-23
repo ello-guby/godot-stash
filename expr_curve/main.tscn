@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cl3wh6sawicrq"]
+[gd_scene load_steps=5 format=3 uid="uid://cl3wh6sawicrq"]
 
 [ext_resource type="Script" uid="uid://bxsrbftgaeltp" path="res://expr_curve/curve_editor.gd" id="1_mpal7"]
 [ext_resource type="Script" uid="uid://b4ebt8p8ttq6w" path="res://script/class/grid.gd" id="2_igxu6"]
+[ext_resource type="PackedScene" uid="uid://c1i8ar5efs32i" path="res://expr_curve/exported.tscn" id="3_5b0mg"]
 
 [sub_resource type="CodeHighlighter" id="CodeHighlighter_bw2k3"]
 number_color = Color(0.631373, 1, 0.878431, 1)
@@ -212,7 +213,7 @@ Note:
   All variable will be a floating number. Thus string
   variable or any non numeric type might result a crash"
 
-[node name="HSeparator" type="HSeparator" parent="Meta"]
+[node name="SyntaxSeparator" type="HSeparator" parent="Meta"]
 layout_mode = 2
 
 [node name="ErrLabel" type="Label" parent="Meta"]
@@ -233,19 +234,18 @@ indent_automatic = true
 auto_brace_completion_enabled = true
 auto_brace_completion_highlight_matching = true
 
-[node name="Resolution" type="HBoxContainer" parent="Meta"]
+[node name="Resolution" parent="Meta" instance=ExtResource("3_5b0mg")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Meta/Resolution"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Resolution:"
-horizontal_alignment = 2
-
-[node name="SpinBox" type="SpinBox" parent="Meta/Resolution"]
-layout_mode = 2
+[node name="Counter" parent="Meta/Resolution" index="1"]
 min_value = 2.0
 max_value = 500.0
+step = 1.0
 value = 100.0
 rounded = true
-allow_greater = true
+allow_lesser = false
+
+[node name="ExportSeparator" type="HSeparator" parent="Meta"]
+layout_mode = 2
+
+[editable path="Meta/Resolution"]

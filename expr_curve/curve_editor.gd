@@ -15,7 +15,10 @@ func _ready() -> void:
 	res_spin_box.value_changed.connect(func(v): _t = 0.0; _update(v))
 	_update(res_spin_box.value)
 
-func _process(delta: float) -> void: _t += delta; _calcu()
+func _process(delta: float) -> void:
+	if code.get_text().find("TIME") != -1:
+		_t += delta;
+		_calcu()
 
 func _get_assign(line: String) -> String:
 	var ass := line.substr(0, line.find("=") + 1)

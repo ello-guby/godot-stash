@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0u1fjodjry2h"]
+
+[ext_resource type="Script" uid="uid://ls3konqctmg6" path="res://chess/piece_2d.gd" id="1_lilqd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lilqd"]
+size = Vector2(50, 50)
+
+[node name="GrabArea" type="Area2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_lilqd")
+sprite = NodePath("ChessPiece")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lilqd")
+
+[node name="ChessPiece" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)

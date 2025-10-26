@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="queen.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="51.265241"
+     inkscape:cy="84.145707"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <path
+     style="font-variation-settings:'opsz' 32, 'wght' 100;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="m 16,110.50466 h 96"
+     id="path20"
+     inkscape:label="body" />
+  <path
+     style="font-variation-settings:'opsz' 32, 'wght' 100;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="M 32,101.08683 H 96"
+     id="path19"
+     inkscape:label="neck" />
+  <path
+     d="M 97.203125,8.7480469 80.277344,33.607422 63.351562,8.7480469 47.074219,33.607422 30.775391,8.7382813 30.786131,58.493651 C 30.820517,76.830587 45.679159,91.670002 64,91.669922 82.32922,91.669991 97.19133,76.817497 97.203125,58.477541 Z"
+     style="font-variation-settings:'opsz' 32, 'wght' 100;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+     id="path6"
+     sodipodi:nodetypes="ccccccccc"
+     inkscape:label="head" />
+</svg>

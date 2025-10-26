@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="bishop.svg"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="4.6074102"
+     inkscape:cx="41.237917"
+     inkscape:cy="74.445292"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1" />
+  <path
+     style="font-variation-settings:'opsz' 32, 'wght' 100;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="m 16,110.50466 h 96"
+     id="path20"
+     inkscape:label="body" />
+  <path
+     style="font-variation-settings:'opsz' 32, 'wght' 100;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;paint-order:markers fill stroke"
+     d="M 32,101.08683 H 96"
+     id="path19"
+     inkscape:label="neck" />
+  <path
+     d="m 64,8.6230469 c -8.937757,0 -16.132813,7.1970091 -16.132813,16.1347651 0,1.504456 0.204203,2.958178 0.585938,4.337891 -10.518753,5.558655 -17.65625,16.601404 -17.65625,29.371094 0,18.394466 14.808659,33.203125 33.203125,33.203125 18.394466,0 33.203125,-14.808659 33.203125,-33.203125 0,-12.769689 -7.137499,-23.812438 -17.65625,-29.371094 0.381735,-1.379713 0.585937,-2.833434 0.585937,-4.337891 C 80.132812,15.820056 72.937757,8.6230469 64,8.6230469 Z"
+     style="font-variation-settings:'opsz' 32, 'wght' 100;fill:none;stroke:#ffffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+     id="path2"
+     inkscape:label="head" />
+</svg>

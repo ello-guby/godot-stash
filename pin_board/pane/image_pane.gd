@@ -2,7 +2,7 @@
 ## Custom [Pane] for displaying image.
 
 ## The image's file path to display.
-@export_global_file("*.png", "*.jpeg", "*.jpg", "*.svg", "*.webp") var file_path: String = "":
+@export_file("*.png", "*.jpeg", "*.jpg", "*.svg", "*.webp") var file_path: String = "":
 	set(v): file_path = v; _update()
 
 ## Keep the aspect ratio.

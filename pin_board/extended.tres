@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://e2xs0l76mq3s"]
+
+[ext_resource type="StyleBox" uid="uid://bxc3m7ur7outo" path="res://pin_board/pane/box_focus_pane.tres" id="1_is52f"]
+[ext_resource type="StyleBox" uid="uid://m0bf447oi2fl" path="res://pin_board/pane/box_pane.tres" id="2_05y4f"]
+[ext_resource type="FontFile" uid="uid://c2ynqac3346mt" path="res://share/fonts/MononokiNerdFontMono-Regular.ttf" id="3_05y4f"]
+
+[resource]
+Pane/constants/margins = 10
+Pane/styles/focus = ExtResource("1_is52f")
+Pane/styles/panel = ExtResource("2_05y4f")
+RichTextLabel/fonts/mono_font = ExtResource("3_05y4f")
+RichTextLabel/styles/focus = ExtResource("1_is52f")
+RichTextLabel/styles/normal = ExtResource("2_05y4f")

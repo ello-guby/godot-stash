@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqjw7igjyi3l4"]
+
+[ext_resource type="Script" uid="uid://bp1obl58pgrhn" path="res://pin_board/board.gd" id="1_c1tcd"]
+[ext_resource type="Script" uid="uid://maxyo02f45ln" path="res://pin_board/property_displayer.gd" id="2_yf8u2"]
+[ext_resource type="Script" uid="uid://bkhb0ut3uvvvq" path="res://pin_board/viewport_2d.gd" id="3_2ues7"]
+[ext_resource type="Theme" uid="uid://e2xs0l76mq3s" path="res://pin_board/extended.tres" id="4_2ues7"]
+[ext_resource type="Script" uid="uid://dgna6cfvyyerj" path="res://pin_board/pane/image_pane.gd" id="5_qucbf"]
+[ext_resource type="Script" uid="uid://i2eg6grx2ex8" path="res://pin_board/pane/text_pane.gd" id="6_lr2s1"]
+[ext_resource type="Script" uid="uid://d4e7yeq26shgg" path="res://pin_board/pane/pane.gd" id="6_qucbf"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_c1tcd")
+
+[node name="Camera" type="Camera2D" parent="."]
+limit_enabled = false
+script = ExtResource("3_2ues7")
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+
+[node name="CameraInfo" type="Label" parent="UserInterface" node_paths=PackedStringArray("master")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -24.0
+offset_right = 32.0
+offset_bottom = -5.0
+grow_vertical = 0
+script = ExtResource("2_yf8u2")
+master = NodePath("../../Camera")
+properties = PackedStringArray("\"%d, %d\" % [&.position.x, &.position.y] # position", "\"%.2f\" % &.zoom.x # zoom")
+
+[node name="Host" type="Container" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_left = -22.0
+offset_top = -272.0
+offset_right = 158.0
+offset_bottom = -91.0
+focus_mode = 2
+theme = ExtResource("4_2ues7")
+script = ExtResource("6_lr2s1")
+text = "Pin Board
+=========
+A Place Where You Can Make ***[rainbow freq=.5 sat=.5 speed=-.5]Cool Stuff[/rainbow]***"
+editable_properties = PackedStringArray("text multiline", "add_markup_examples")
+metadata/_custom_type_script = "uid://i2eg6grx2ex8"
+metadata/_edit_use_anchors_ = true
+
+[node name="Info" type="Container" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_left = -6.0
+offset_top = -150.0
+offset_right = 301.0
+offset_bottom = 290.0
+focus_mode = 2
+theme = ExtResource("4_2ues7")
+script = ExtResource("6_lr2s1")
+text = "Getting Started
+=============
+It's like a *dynamic windowing system*
+
+Viewport Control
+------
+- **Move** by ***hold*** and ***drag middle mouse button*** *(it's the scroll button)*
+- Do **more stuff** by ***pressing right click***
+
+Pane Control
+------------
+- **Move** any *Pane* by ***hold*** and ***drag*** it's ***body***.
+- **Resize** any *Pane* by ***hold*** and ***drag*** it's ***corners or sides***.
+- Do **more stuff** by ***right clicking*** it."
+editable_properties = PackedStringArray("text multiline", "add_markup_examples")
+metadata/_custom_type_script = "uid://i2eg6grx2ex8"
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="Container" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_left = -314.0
+offset_top = -122.0
+offset_right = -44.0
+offset_bottom = 149.0
+focus_mode = 2
+theme = ExtResource("4_2ues7")
+script = ExtResource("5_qucbf")
+file_path = "/media/stash/Projects/Godot/stash/share/sprites/pin_board_icon.svg"
+editable_properties = PackedStringArray("file_path global_file *.png *.svg *.jpg *.jpeg *.webp", "expand_mode enum Keep Ignore FitWidth FitWidthProp FitHeight FitHeightProp", "stretch_mode enum Scale Tile Keep Centered KeepAspect KeepAspectCentered KeepAspectCovered", "keep_aspect_ratio")
+metadata/_custom_type_script = "uid://dgna6cfvyyerj"
+metadata/_edit_use_anchors_ = true
+
+[node name="Pane" type="Container" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_left = -238.0
+offset_top = -6.0
+offset_right = -113.0
+offset_bottom = 119.0
+focus_mode = 2
+theme = ExtResource("4_2ues7")
+script = ExtResource("6_qucbf")
+metadata/_custom_type_script = "uid://d4e7yeq26shgg"
+metadata/_edit_use_anchors_ = true
+
+[node name="Pane2" type="Container" parent="."]
+custom_minimum_size = Vector2(50, 50)
+offset_left = -286.0
+offset_top = -56.0
+offset_right = -153.0
+offset_bottom = 79.0
+focus_mode = 2
+theme = ExtResource("4_2ues7")
+script = ExtResource("6_qucbf")
+metadata/_custom_type_script = "uid://d4e7yeq26shgg"
+metadata/_edit_use_anchors_ = true
